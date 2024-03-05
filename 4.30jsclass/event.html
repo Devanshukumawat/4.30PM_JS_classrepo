@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body-color">
+    <button onclick="Submit()" >Submit</button>
+
+    <button id="prompt">Prompt</button>
+
+    <button id="color">color</button>
+
+    <input type="color" name="" id="">
+
+
+    <script>
+        function Submit(){
+            alert("Ok to submit...")
+        }
+
+        function myPrompt(){
+            prompt("Hahahha")
+        }
+
+        document.getElementById("prompt").addEventListener("click",myPrompt)
+
+        document.getElementById('color').addEventListener('click',()=>{
+            document.getElementById('body-color').style.backgroundColor="black"
+        })
+    </script>
+</body>
+</html>

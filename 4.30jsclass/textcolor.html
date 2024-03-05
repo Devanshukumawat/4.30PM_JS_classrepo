@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body{
+            cursor: pointer;
+        }
+    </style>
+  </head>
+  <body>
+    <h1 id="text_color">Devanshu Sir</h1>
+    <input type="color" name="" id="color_picker" onchange="colorChange()" />
+
+    <script>
+      function colorChange() {
+        let input_color = document.getElementById("color_picker").value;
+        document.getElementById("text_color").style.color = input_color;
+      }
+    </script>
+  </body>
+</html>

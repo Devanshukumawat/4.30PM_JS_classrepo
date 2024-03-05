@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Task</title>
+    
+</head>
+<body>
+    
+    <div align="center">Calculator UI</div>
+    <table border="1" align="center">
+        <tr>
+            <th>
+                <input type="text" name="" id="display">
+            </th>
+        </tr>
+        <tr>
+            <td align="center">
+                <input type="button" value="1" onclick="haandleValue('1')" >
+                <input type="button" value="2" onclick="haandleValue('2')">
+                <input type="button" value="3" onclick="haandleValue('3')">
+                <input type="button" value="+" onclick="haandleValue('+')">
+            </td>
+        </tr>
+        <tr>
+            <td align="center" > 
+                <input type="button" value="4" onclick="haandleValue('4')">
+                <input type="button" value="5" onclick="haandleValue('5')">
+                <input type="button" value="6" onclick="haandleValue('6')">
+                <input type="button" value="-" onclick="haandleValue('-')">
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <input type="button" value="7" onclick="haandleValue('7')">
+                <input type="button" value="8" onclick="haandleValue('8')">
+                <input type="button" value="9" onclick="haandleValue('9')">
+                <input type="button" value="*" onclick="haandleValue('*')">
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <input type="button" value="C" onclick="handleClear()">
+                <input type="button" value="0" onclick="haandleValue('0')">
+                <input type="button" value="=" onclick="handleTotal()">
+                <input type="button" value="/" onclick="haandleValue('/')">
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        
+        let display  = document.getElementById('display')
+
+        function haandleValue(input){
+            display.value += input
+        }
+
+        function handleClear(){
+            display.value = " "
+        }
+
+        function handleTotal(){
+            display.value = eval(display.value)
+        }
+
+       console.log( eval("1+2+3"))
+
+    </script>
+
+</body>
+</html>

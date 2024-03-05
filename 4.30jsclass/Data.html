@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="time"></h1>
+    <h2 id="day"></h2>
+
+
+    <script>
+        //dd/mm/yy h:m:s
+
+
+        
+
+        function myTime(){
+            let allTime  = new Date()
+        let todayDate = allTime.getDate()
+    
+        let allMonth = ["Jan","Feb","March","April","May","June","July","August","Sep","Oct","Nov","Dec"]
+        let months  = allTime.getMonth()
+        let monthName = allMonth[months]
+        
+        let year = allTime.getFullYear()
+        console.log(`Date :- ${todayDate}/${monthName}/${year}`)
+
+        let hours = allTime.getHours()
+        let min = allTime.getMinutes()
+        let sec = allTime.getSeconds()
+
+        let allDays = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]
+        let todayDay = allTime.getDay()
+        let DayName = allDays[todayDay]
+       
+        let Days = `Day :- ${DayName}`
+    
+        console.log(`Time :- ${hours}:${min}:${sec}`)
+
+        let time =`${todayDate}/${monthName}/${year}  ${hours}:${min}:${sec}`
+
+        document.getElementById("time").innerText= time
+        document.getElementById("day").innerText = Days
+
+        }
+
+        
+        setInterval(myTime,1000)
+
+
+    </script>
+
+</body>
+</html>

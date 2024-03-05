@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="d1">Devanshu</h1>
+    <h2 class="c1">Lorem ipsum dolor sit amet.</h2>
+    <p>Lorem ipsum dolor sit amet consectetur.</p>
+
+    <p id="p1"></p>
+
+    <button onclick="helloFun()">Click </button>
+
+
+
+    <script>
+        let a = document.getElementById("d1").innerText = "Manny"
+
+        let b = document.getElementsByClassName("c1")[0].innerText = "Hello class..."
+
+        let c = document.getElementsByTagName("p")[0].innerText = "Welcome class"
+
+
+        function helloFun(){
+           let a =  prompt("USer input :- ")
+           console.log(a)
+        }
+
+        
+
+        console.log(c)
+
+    </script>
+
+</body>
+</html>
